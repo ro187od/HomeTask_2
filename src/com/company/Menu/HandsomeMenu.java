@@ -1,10 +1,15 @@
 package com.company.Menu;
 
+import com.company.Serviece.MainService;
+
 import java.util.Scanner;
 
 public class HandsomeMenu {
+    MainService service;
     Scanner in;
+
     public HandsomeMenu(){
+        service = new MainService();
         printMenu();
     }
 
@@ -20,7 +25,7 @@ public class HandsomeMenu {
         Scanner in = new Scanner(System.in);
         int selectedAction = in.nextInt();
         if(selectedAction == 1){
-
+            service.getAll();
         }
         if(selectedAction == 2){
 
